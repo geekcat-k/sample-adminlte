@@ -1,0 +1,8 @@
+[
+    { "label": "BUTTON", "value": "BUTTON" },
+    { "label": "TEXT", "value": "TEXT" },
+    { "label": "SELECT", "value": "SELECT" },
+    { "label": "RADIO", "value": "RADIO" },
+    { "label": "CHECKBOX", "value": "CHECKBOX" },
+    { "label": "TEXTAREA", "value": "TEXTAREA" }
+]

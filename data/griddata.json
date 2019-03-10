@@ -1,7 +1,6 @@
 [
-    { "Name": "Otto Clay", "Age": 25, "Country": 1, "Address": "Ap #897-1459 Quam Avenue", "Married": false },
-    { "Name": "Connor Johnston", "Age": 45, "Country": 2, "Address": "Ap #370-4647 Dis Av.", "Married": true },
-    { "Name": "Lacey Hess", "Age": 29, "Country": 3, "Address": "Ap #365-8835 Integer St.", "Married": false },
-    { "Name": "Timothy Henson", "Age": 56, "Country": 1, "Address": "911-5143 Luctus Ave", "Married": true },
-    { "Name": "Ramona Benton", "Age": 32, "Country": 3, "Address": "Ap #614-689 Vehicula Street", "Married": false }
+    { "id": "1", "pageName": "まるまる画面", "elementName": "", "elementType": "BUTTON", "XPath": "1qaz" },
+    { "id": "2", "pageName": "まるまる画面", "elementName": "", "elementType": "TEXT", "XPath": "2wsx." },
+    { "id": "4", "pageName": "まるまる画面", "elementName": "", "elementType": "RADIO", "XPath": "3edc" },
+    { "id": "5", "pageName": "まるまる画面", "elementName": "", "elementType": "SELECT", "XPath": "4rfv" }
 ]

@@ -1,14 +1,16 @@
 $(document).ready(function(){
     $.ajax({
         type: "GET",
-        url: "./data/griddata.json"
+        url: "./data/griddata.json?dummy"
     })
     .done( (data) => {
-        var countries = [
-        { Name: "", Id: 0 },
-        { Name: "United States", Id: 1 },
-        { Name: "Canada", Id: 2 },
-        { Name: "United Kingdom", Id: 3 }
+        var elementType = [
+            { Name: "BUTTON", Id: "BUTTON" },
+            { Name: "TEXT", Id: "TEXT" },
+            { Name: "SELECT", Id: "SELECT" },
+            { Name: "RADIO", Id: "RADIO" },
+            { Name: "CHECKBOX", Id: "CHECKBOX" },
+            { Name: "TEXTAREA", Id: "TEXTAREA" }
         ];
 
         $("#jsGrid").jsGrid({
@@ -22,12 +24,17 @@ $(document).ready(function(){
 
         data: data,
 
+        controller: {
+            insertItem: function (d) {alert(d.itemCount)},
+            updateItem: function (d) {alert(d.itemCount)},
+            deleteItem: function (d) {alert(d.data)}
+        },
+
         fields: [
-            { name: "Name", type: "text", width: 150, validate: "required" },
-            { name: "Age", type: "number", width: 50 },
-            { name: "Address", type: "text", width: 200 },
-            { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
-            { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
+            { title: "画面名", name: "pageName", type: "text", width: 150, validate: "required" },
+            { title: "エレメント名", name: "elementName", type: "text", width: 200, validate: "required" },
+            { title: "タイプ", name: "elementType", type: "select", items: elementType, valueField: "Id", textField: "Name", validate: "required" },
+            { title: "XPath", name: "XPath", type: "text", width: 250, validate: "required" },
             { type: "control" }
         ]
         });
